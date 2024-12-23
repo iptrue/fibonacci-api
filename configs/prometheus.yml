@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'fibonacci_api'
+    static_configs:
+      - targets: ['fibonacci-api:9091'] # Указываем порт HTTP для метрик

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package fibonacci;
+
+option go_package = "./generated;proto";
+
+service FibonacciService {
+  rpc GetFibonacciNumber (FibonacciRequest) returns (FibonacciResponse);
+  rpc GetFibonacciSequence (FibonacciSequenceRequest) returns (FibonacciSequenceResponse);
+}
+
+message FibonacciRequest {
+  int64 index = 1;
+}
+
+message FibonacciResponse {
+  oneof value {
+    int64 int_value = 1;
+    string big_value = 2;
+  }
+}
+
+message FibonacciSequenceRequest {
+  int64 max_index = 1;
+}
+
+message FibonacciSequenceResponse {
+  repeated string sequence = 1;
+}

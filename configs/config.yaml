@@ -1,0 +1,11 @@
+grpc_port: ":50051"
+redis_addr: "redis:6379"
+prometheus_addr: "9091"
+max_fibonacci_n: 100000000
+cache_expiration: 30s
+local_cache_size: 10000
+log_level: "debug"
+log_output: "console"
+max_tokens: 1
+refill_rate: 1000000000
+grpc_timeout: 15s
